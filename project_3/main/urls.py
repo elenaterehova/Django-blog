@@ -1,7 +1,8 @@
 from django.conf import settings
 from django.contrib.auth.views import LogoutView
 from django.urls import path
-from .views import MainView, PostDetailView, SignUpView, SignInView, FeedBackView, SuccessView, SearchResultsView
+from .views import MainView, PostDetailView, SignUpView, SignInView, FeedBackView, SuccessView, SearchResultsView, \
+    TagView
 
 urlpatterns = [
     path('', MainView.as_view(), name='index'),
@@ -12,6 +13,7 @@ urlpatterns = [
     path('contact/', FeedBackView.as_view(), name='contact'),
     path('contact/success/', SuccessView.as_view(), name='succcess'),
     path('search/', SearchResultsView.as_view(), name='search_results'),
+    path('tag/<slug:slug>/', TagView.as_view(), name='tag'),
 
 
 ]
