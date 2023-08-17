@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'main',
     'ckeditor',
     'ckeditor_uploader',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -158,3 +159,9 @@ CKEDITOR_CONFIGS = {
 
 ###################################
 LOGOUT_REDIRECT_URL = "/"
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'elena.terehova@lamoda.ru'
+EMAIL_HOST_PASSWORD = 'ritebudgebkbbalm'
